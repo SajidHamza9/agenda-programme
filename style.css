@@ -159,3 +159,45 @@ body{
   border-radius: 0 !important;
 } 
 
+/* Actualite */
+
+#actualite .card{
+  direction: rtl;
+  border-radius: 0;
+  text-align: right; 
+}
+
+#actualite .card .card-img{
+  border-radius: 0;
+  max-height:150px;
+}
+#actualite .card-title{
+  color: var(--color2);
+  text-decoration: none;
+  font-size: 1.3rem;
+
+}
+#actualite .card:nth-child(even){
+  background-color: #fff;
+}
+#actualite .card:nth-child(odd){
+  background-color: #F4F4F4;
+}
+#all-news{
+  color: var(--color2);
+  text-align: center;
+  font-size:2.5rem;
+  font-family: 'Lalezar', cursive;
+  margin: 2rem;
+}
+@media(min-width:768px){
+  #actualite .card .card-img{
+    border-radius: 0;
+    height:200px;
+  }
+  #actualite .card{
+    max-height:150px; 
+  }
+}
+
+

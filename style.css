@@ -1,0 +1,161 @@
+:root{
+    --color1:#C27624;
+    --color2:#34B1E4;
+    --color3:#EE7419;
+    --color4:#A5C724;
+}
+body{
+    background-color:#F4F4F4 !important;
+}
+.flip-card {
+    background-color: transparent;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 10px auto;
+  }
+  .service {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .service {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lalezar', cursive;
+    flex-direction: column;
+    text-align: center;
+  }
+
+.flip-card-front {
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+  }
+.flip-card-back {
+    font-size: 3rem;
+    border-radius: 4px;
+    transform: rotateY(180deg);
+    color: #FFF !important;
+    background-color: var(--color3);
+
+  } 
+ .flip-card-front h4 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.6rem;
+  }
+.flip-card-back h4 a{
+    font-size: 2rem;
+    margin: 1rem 0 0.6rem;
+    color: #FFF !important;
+  }
+.flip-card-front i {
+    font-size: 3.45rem;
+    margin: 1rem 0;
+  }
+
+}
+.parent:nth-child(odd) .flip-card-back  {
+    background-color: var(--color3);
+
+}
+.parent:nth-child(even) .flip-card-back {
+  background-color: var(--color1);
+
+}
+.parent:nth-child(odd) .flip-card-front {
+    background-color: var(--color2);
+
+}
+.parent:nth-child(even) .flip-card-front {
+    background-color: var(--color4);
+}
+/* Agenda + Programme */
+
+#programme .card-title{
+    color: var(--color3);
+}
+    
+#programme-header,#agenda-header
+{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#programme .btn ,#agenda-header .btn
+{
+    background-color: var(--color3);
+    color: #FFF;
+    font-size: 1rem;
+}
+
+ .programme-title,.agenda-title
+{
+    color:var(--color3);
+    text-align:right;
+    margin-top:1rem;
+    font-size:1.5rem;
+}
+
+#agenda .card-header
+{
+  font-size: 1rem;
+  text-align: right;
+
+}
+#agenda .card-body
+{
+  text-align: right;
+}
+
+#agenda .card:nth-child(odd) .card-header
+{
+  color: #A5C724;
+}
+#agenda .card:nth-child(even) .card-header
+{
+  color: #EE7419;
+}
+#agenda .card-text
+{
+  text-decoration: none;
+  color: #000;
+}
+#agenda .card-body{
+  height: 88px !important;
+}
+#programme .item-a .row , #programme .item-a .card ,#programme .item-a .card .card-body
+{
+  height: 100% !important;
+}
+#programme .item-a .card .card-body{
+  display: flex !important;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media(min-width:1200px)
+{
+  #programme .item-a{
+      height:400px !important;
+  }
+}
+#agenda .card{
+  border-radius: 0 !important;
+} 
+
